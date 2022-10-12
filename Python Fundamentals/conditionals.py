@@ -1,26 +1,48 @@
 # Conditional
-# Method evaluate data 
+# Method evauluate data
 # if then else
 
 import random
+#ask the user to select upper bound
+invalid_upper_bound = True # boolean True or false
 
-high_range = 100
-middle_number = int(high_range/2)
-my_guess = middle_number
-number_guesses = 0
-highOrLow = "lower"
-output = "{} is {} than {}"
+while invalid_upper_bound:
+    upper_bound = input("What is the upper bound? ")
+    #check if upper bound is valid returns -> string
+    if upper_bound.isdigit():
+        upper_bound = int(upper_bound)
+        invalid_upper_bound = False
+    else:
+        print('That is not a valid input')
 
-my_random_number = random.randint(1, high_range)
 
-print(my_random_number)
-print(my_guess)
 
-#evaluate the random number and compare it to middle number
-if my_guess < my_random_number:
-    highOrLow = "lower"
+    if user_guess == random_number:
+        print("You win")
+        # exit the loop
+    # user guess is not equal to random number
+    else:
+        print("You lose")
+    number_of_guesses += 1 
 
-if my_guess > my_random_number:
-    highOrLow = "higher"
+print("Game Over you took " + str(number_of_guesses) + " guesses")
+# high_range = 100
+# middle_number = int(high_range/2)
+# my_guess = middle_number
+# number_guesses = 0
+# highOrLow = "lower"
+# output = "{} is {} than {}"
 
-    print(output.format(my_guess, highOrLow, my_random_number))
+# my_random_number = random.randint(1, high_range)
+
+# print(my_random_number)
+# print(my_guess)
+
+# #evaluate the random number and compare it to middle number
+# if my_guess < my_random_number:
+#     highOrLow = "lower"
+
+# if my_guess > my_random_number:
+#     highOrLow = "higher"
+
+#     print(output.format(my_guess, highOrLow, my_random_number))
